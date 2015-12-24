@@ -29,14 +29,14 @@ $countriesStates = $cs->countriesStates();
 		echo '<hr>';
 	}
 
-#	to get states by country_code
+#	to get states by Country Code
 	$getStates = $cs->getStates('BD');
 	foreach($getStates as $state){
 		echo $state;
 		echo '<hr>';
 	}
 
-#	to get country with country_code
+#	to get country with Country Code
 	foreach($countriesStates as $csval => $cskey){
 		echo ucwords($cskey['c']); 
 		echo ' - '; 
@@ -44,7 +44,7 @@ $countriesStates = $cs->countriesStates();
 		echo '<hr>';
 	}
 
-# 	to see clean/clear view to understand -> uncomment this
+# 	to see clean/clear view to understand 
 	echo '<pre>';
 	print_r($countriesStates);
 	echo '</pre>';
@@ -52,10 +52,12 @@ $countriesStates = $cs->countriesStates();
 
 
  #Select option example with country and states 
+ <pre>
 	<select id="country_states" class="form-control">
 		<option value="">Select Country</option>
 		<?php  foreach($countriesStates as $csval => $cskey){ ?>
 			<option value="<?php echo $cskey['s']; ?>"><?php echo ucwords($cskey['c']); ?></option>
 		<?php } ?>
 	</select>
+	</pre>
  
