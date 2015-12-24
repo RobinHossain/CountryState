@@ -7,9 +7,9 @@ This script can:
 2. Find out all states by country code
 3. Check state is valid or not by Country Short Code, ISO Code etc.
 
+<?php
 
-//here is all example you should use
-//BD parameter passed as country code of Bangladesh, you should use your own; 
+#here is all example you should use, BD parameter passed as country code of Bangladesh, you should use your own; 
 
 $cs = new CountryState();
 $countries = $cs->countries();
@@ -49,10 +49,9 @@ $countriesStates = $cs->countriesStates();
 	print_r($countriesStates);
 	echo '</pre>';
 
-?>
 
 
- //Select option example with country and states 
+ #Select option example with country and states 
 	<select id="country_states" class="form-control">
 		<option value="">Select Country</option>
 		<?php  foreach($countriesStates as $csval => $cskey){ ?>
