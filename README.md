@@ -7,7 +7,6 @@ This script can:
 2. Find out all states by country code
 3. Check state is valid or not by Country Short Code, ISO Code etc.
 
-<?php
 
 #here is all example you should use, BD parameter passed as country code of Bangladesh, you should use your own; 
 
