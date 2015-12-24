@@ -8,7 +8,6 @@ This script can:
 3. Check state is valid or not by Country Short Code, ISO Code etc.
 
 
-<?php
 //here is all example you should use
 //BD parameter passed as country code of Bangladesh, you should use your own; 
 
@@ -18,46 +17,46 @@ $getStates = $cs->getStates('BD');
 $countriesStates = $cs->countriesStates();
 
 #	you should test first before use
-//	print_r($countries);
-//	print_r($getStates);
-//	print_r($countriesStates);
+	print_r($countries);
+	print_r($getStates);
+	print_r($countriesStates);
 
 
 
 #	to get country list only
-//	foreach($countries as $country){
-//		echo $country;
-//		echo '<hr>';
-//	}
+	foreach($countries as $country){
+		echo $country;
+		echo '<hr>';
+	}
 
 #	to get states by country_code
-//	$getStates = $cs->getStates('BD');
-//	foreach($getStates as $state){
-//		echo $state;
-//		echo '<hr>';
-//	}
+	$getStates = $cs->getStates('BD');
+	foreach($getStates as $state){
+		echo $state;
+		echo '<hr>';
+	}
 
 #	to get country with country_code
-//	foreach($countriesStates as $csval => $cskey){
-//		echo ucwords($cskey['c']); 
-//		echo ' - '; 
-//		echo $cskey['s'];
-//		echo '<hr>';
-//	}
+	foreach($countriesStates as $csval => $cskey){
+		echo ucwords($cskey['c']); 
+		echo ' - '; 
+		echo $cskey['s'];
+		echo '<hr>';
+	}
 
 # 	to see clean/clear view to understand -> uncomment this
-//	echo '<pre>';
-//	print_r($countriesStates);
-//	echo '</pre>';
+	echo '<pre>';
+	print_r($countriesStates);
+	echo '</pre>';
 
 ?>
 
 
-<!-- Select option example with country and states -->
-<!--	<select id="country_states" class="form-control">-->
-<!--		<option value="">Select Country</option>-->
-<!--		--><?php // foreach($countriesStates as $csval => $cskey){ ?>
-<!--			<option value="--><?php //echo $cskey['s']; ?><!--">--><?php //echo ucwords($cskey['c']); ?><!--</option>-->
-<!--		--><?php //} ?>
-<!--	</select>-->
-<!-- Select option example with country and states -->
+ //Select option example with country and states 
+	<select id="country_states" class="form-control">
+		<option value="">Select Country</option>
+		<?php  foreach($countriesStates as $csval => $cskey){ ?>
+			<option value="<?php echo $cskey['s']; ?>"><?php echo ucwords($cskey['c']); ?></option>
+		<?php } ?>
+	</select>
+ 
